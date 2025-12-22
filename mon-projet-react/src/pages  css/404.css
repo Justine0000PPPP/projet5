@@ -1,0 +1,20 @@
+.page404 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centre verticalement */
+  align-items: center;     /* centre horizontalement */
+  height: 100vh;           /* prend toute la hauteur de la page */
+  background-color: #000;  /* optionnel : fond noir pour contraste */
+  text-align: center;
+  color: orange;           /* couleur par défaut pour tout le texte */
+}
+
+.page404 h1 {
+  font-size: 8rem;         /* très grand */
+  margin: 0 0 20px 0;
+}
+
+.page404 p {
+  font-size: 1.5rem;
+  margin: 0;
+}

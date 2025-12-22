@@ -1,0 +1,55 @@
+.collapse {
+  background-color: #ff6060; 
+  color: white;            
+  margin: 20px 0;           
+  border-radius: 10px;      
+  overflow: hidden;          
+}
+
+.collapse-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+}
+
+.collapse-content {
+  padding: 15px 20px;
+  background-color: #000000; 
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.arrow.open {
+  transform: rotate(180deg); /* flèche vers le haut */
+}
+
+
+/* Header (titre + flèche) */
+.collapse-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+}
+
+
+/* Paragraphe contenu */
+.collapse-content {
+  max-height: 0;              /* caché par défaut */
+  overflow: hidden;           
+  padding: 0 20px;            /* padding horizontal seulement */
+  opacity: 0;                 /* invisible */
+  transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+}
+
+.collapse-content.open {
+  max-height: 500px;          /* hauteur suffisante pour le texte */
+  padding: 15px 20px;         /* padding vertical ajouté */
+  opacity: 1;                 /* texte visible */
+}

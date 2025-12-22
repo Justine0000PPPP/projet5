@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Page3 = () => {
+const Fiches_logement = () => {
   return (
     <div>
       <h1>Bonjour 3 !</h1>
@@ -9,4 +9,4 @@ const Page3 = () => {
   );
 };
 
-export default Page3;
+export default Fiches_logement;
