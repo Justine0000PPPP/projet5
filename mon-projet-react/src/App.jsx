@@ -8,7 +8,7 @@ import Footer from "./components/footer";
 import Home from "./pages/Home";
 import Apropo from "./pages/Apropo";
 import FichesLogement from "./pages/FichesLogement";
-import Page404 from "./pages/Page404";
+import Page404 from "./pages/page404";
 
 function App() {
   return (

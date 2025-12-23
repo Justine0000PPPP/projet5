@@ -1,11 +1,32 @@
-import React from "react";
-import "./Page1.css"; // <-- ici on importe le CSS de cette page
+import logements from "../data/logements.json";
+import Bloque_logement from "/components/bloque_logement";
+import banner from "../assets/images/banner.jpg";
+import "./Page1.css";
 
 const Home = () => {
   return (
-    <div>
-      <h1>Bonjour 1 !</h1>
-      <p>Ceci est ma première page React.</p>
+    <div className="home">
+
+      {/* Bannière */}
+      <div className="banner">
+        <img src={banner} alt="Paysage" />
+        <p className="banner-text">
+          Chez vous, partout et ailleurs
+        </p>
+      </div>
+
+      {/* Cartes */}
+      <div className="cards-container">
+        {logements.map(logement => (
+          <Bloque_logement
+            key={logement.id}
+            id={logement.id}
+            title={logement.title}
+            image={logement.cover}
+          />
+        ))}
+      </div>
+
     </div>
   );
 };

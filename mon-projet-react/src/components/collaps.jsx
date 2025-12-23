@@ -1,16 +1,26 @@
-import logo from "../assets/logo-footer.png";
-import "./footer.css";
+import { useState } from "react";
 
-const Footer = () => {
+const Collapse = ({ title, content }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <footer className="footer">
-      <img
-        src={logo}
-        alt="Logo Kasa"
-        className="footer-logo"
-      />
-    </footer>
+    <div className="collapse">
+
+      <div
+        className="collapse-header"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <h3>{title}</h3>
+
+        <span className="arrow">{isOpen ? '▲' : '▼'}</span>
+      </div>
+
+      <div className={`collapse-content ${isOpen ? 'open' : ''}`}>
+        <p>{content}</p>
+      </div> 
+
+    </div>
   );
 };
 
-export default Footer;
+export default Collapse;
