@@ -1,7 +1,7 @@
-import logements from "../data/logements.json";
-import Bloque_logement from "/components/bloque_logement";
-import banner from "../assets/images/banner.jpg";
-import "./Page1.css";
+import logements from "../data.json";
+import Bloque_logement from "../components/bloque_logement";
+import banner from "../assets/images/source2.jpg";
+import "../pages-css/home.css";
 
 const Home = () => {
   return (

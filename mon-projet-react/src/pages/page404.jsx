@@ -1,5 +1,5 @@
 import React from 'react';
-import '../pages-css/404.css';
+import '../pages-css/p404.css';
 
 const Page404 = () => {
   return (

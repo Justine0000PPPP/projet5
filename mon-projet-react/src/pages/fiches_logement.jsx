@@ -1,5 +1,5 @@
 import React from 'react';
-import banner from "../assets/images/banner.jpg";
+import banner from "../assets/images/source2.jpg";
 import Equipements from "../components/Equipements";
 
 const Fiches_logement = () => {

@@ -1,3 +1,18 @@
+/* explicaiton code 
+  transition: transform 0.3s ease;
+  transition = animation 
+  : transform = le type danimation 
+   0.3s ease; = la viteesse 
+
+.arrow.open {
+  transform: rotate(180deg);
+  .open = se qui se passe quand linaimton es declancher 
+  transform = se qui se passe 
+  puis apres les deux poitn quel type de trensome 
+
+ */
+
+
 .collapse {
   background-color: #ff6060; 
   color: white;            
@@ -26,26 +41,6 @@
 
 .arrow.open {
   transform: rotate(180deg); /* flèche vers le haut */
-}
-
-
-/* Header (titre + flèche) */
-.collapse-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  cursor: pointer;
-}
-
-
-/* Paragraphe contenu */
-.collapse-content {
-  max-height: 0;              /* caché par défaut */
-  overflow: hidden;           
-  padding: 0 20px;            /* padding horizontal seulement */
-  opacity: 0;                 /* invisible */
-  transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
 }
 
 .collapse-content.open {

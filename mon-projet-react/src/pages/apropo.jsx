@@ -1,5 +1,5 @@
-import logo from "../assets/images/logo.png";
-import Collapse from "../components/Collapse";
+import logo from "../assets/images/source2.jpg";
+import Collapse from "../components/collapse";
 
 const Apropo = () => {
   return (

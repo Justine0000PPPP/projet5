@@ -1,0 +1,20 @@
+.apropo {
+  width: 100%;
+}
+
+/* Conteneur de l’image */
+.apropo .img {
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 40px;
+}
+
+/* Image */
+.imgapropo {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;        /* centre l’image */
+  border-radius: 20px;   /* coins arrondis */
+  object-fit: cover;
+}

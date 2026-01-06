@@ -7,7 +7,7 @@ import Footer from "./components/footer";
 // Pages
 import Home from "./pages/Home";
 import Apropo from "./pages/Apropo";
-import FichesLogement from "./pages/FichesLogement";
+import FichesLogement from "./pages/fiches_logement";
 import Page404 from "./pages/page404";
 
 function App() {
