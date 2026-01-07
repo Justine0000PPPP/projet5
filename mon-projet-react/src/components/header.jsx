@@ -10,10 +10,10 @@ const Header = () => {
       </div>
 
       <nav className="header__nav">
-        <Link to="/page1" className="header__link">
+        <Link to="/" className="header__link">
           Accueil
         </Link>
-        <Link to="/page2" className="header__link">
+        <Link to="/apropos" className="header__link">
           À propos
         </Link>
       </nav>

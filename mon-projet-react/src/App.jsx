@@ -5,7 +5,7 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 
 // Pages
-import Home from "./pages/Home";
+import Home from "./pages/home";
 import Apropo from "./pages/Apropo";
 import FichesLogement from "./pages/fiches_logement";
 import Page404 from "./pages/page404";
