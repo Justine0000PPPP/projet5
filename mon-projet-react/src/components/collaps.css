@@ -10,64 +10,57 @@
   transform = se qui se passe 
   puis apres les deux poitn quel type de trensome 
 
- */
-/* === CONTAINER DE CHAQUE COLLAPSE === */
-.collapse {
-  margin: 15px 0;               /* espace entre les blocs */
+ */.collapse {
+  margin: 15px 0;
   border-radius: 10px;
   overflow: hidden;
   font-family: Arial, sans-serif;
 }
 
-/* HEADER DU COLLAPSE (titre + flèche) */
 .collapse-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-  background-color: #ff6060;   /* fond orange pour le header */
-  color: white;                 /* texte blanc */
+  background-color: #ff6060;
+  color: white;
   font-weight: bold;
   cursor: pointer;
   user-select: none;
-  border-radius: 10px;          /* coins arrondis du header */
-  
-  width: 80%;                   /* <-- réduit la largeur du header */
-  margin: 0 auto;               /* <-- centre le bloc horizontalement */
+  border-radius: 10px;
+  width: 80%;
+  margin: 0 auto;
 }
 
-/* FLECHE */
 .arrow {
-  transition: transform 0.3s ease; /* rotation animation */
+  transition: transform 0.3s ease;
 }
 
 .arrow.open {
-  transform: rotate(180deg);    /* flèche vers le haut quand ouvert */
+  transform: rotate(180deg);
 }
 
-/* CONTENU DU COLLAPSE */
 .collapse-content {
-  max-height: 0;                /* bloc fermé */
-  overflow: hidden;             /* cache le texte */
+  max-height: 0;
+  overflow: hidden;
   transition: max-height 0.4s ease, padding 0.4s ease;
-  background-color: #fff;       /* fond blanc du texte */
-  color: #000;                  /* texte noir */
-  padding: 0 20px;              /* padding horizontal identique au header quand fermé */
-  opacity: 0;                   /* texte invisible */
+  background-color: #fff;
+  color: #000;
+  padding: 0 20px;
+  opacity: 0;
 }
 
-/* CONTENU QUAND OUVERT */
 .collapse-content.open {
-  max-height: 500px;            /* ajustable selon la taille du texte */
-  padding: 15px 20px;           /* <-- même padding que le header pour aligner le texte */
+  max-height: 500px;
+  padding: 15px 20px;
   opacity: 1;
   margin-left: 110px;
-  }
-@media (max-width: 768px) {
+}
 
+@media (max-width: 768px) {
   .collapse-header {
-    width: 90%;           /* plus large sur mobile */
-    padding: 12px 16px;   /* padding réduit */
+    width: 90%;
+    padding: 12px 16px;
   }
 
   .collapse-content {
@@ -76,6 +69,6 @@
 
   .collapse-content.open {
     padding: 12px 16px;
-    margin-left: 0;       /* <-- OBLIGATOIRE pour mobile */
+    margin-left: 0;
   }
 }

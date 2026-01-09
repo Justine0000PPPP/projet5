@@ -1,38 +1,32 @@
-/* === BANNIÈRE (image du haut) === */
 .banner {
   position: relative;
   max-width: 1200px;
   height: 220px;
-  margin: 0 auto 40px auto; /* centre parfaitement */
+  margin: 0 auto 40px auto;
   border-radius: 15px;
   overflow: hidden;
 }
 
-/* Image de la bannière */
 .banner img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
   border-radius: 15px;
 }
 
-/* Filtre sombre (contenu dans l'image) */
 .banner::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 20px;
-  right: 20px;
-  bottom: 0;
+  inset: 0;
   background-color: rgba(0, 0, 0, 0.45);
   border-radius: 15px;
   z-index: 1;
 }
 
-/* Texte centré (réglage vertical ICI) */
 .banner-text {
   position: absolute;
-  top: 45%;                  /* diminue pour monter le titre */
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -43,82 +37,50 @@
   padding: 0 20px;
 }
 
-/* === CONTENEUR DES CARTES === */
 .cards-container {
   display: flex;
-  flex-wrap: wrap;           /* permet plusieurs lignes */
-  gap: 20px;                 /* espace entre cartes horizontal et vertical */
-  justify-content: center;   /* centre les cartes horizontalement */
-  padding: 20px;             /* espace intérieur autour du bloc */
-  max-width: 1200px;         /* largeur max pour ne pas que ça prenne tout l'écran */
-  margin: 0 auto 60px auto;  /* ⬅️ 60px d'espace sous les cartes avant le footer */
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
 }
 
-/* === CHAQUE CARTE === */
 .caré {
   background-color: #fff;
-  width: 300px;              /* largeur fixe, pas trop grande */
+  width: 300px;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* met le titre en bas */
+  justify-content: flex-end;
   position: relative;
-  text-decoration: none;     /* supprime le soulignement du Link */
+  text-decoration: none;
 }
 
-/* IMAGE DANS CHAQUE CARTE */
 .caré .img {
   width: 100%;
-  height: 200px;             /* hauteur fixe pour toutes les cartes */
+  height: 200px;
   overflow: hidden;
 }
 
 .caré .img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;         /* recadre l'image sans déformer */
+  object-fit: cover;
   display: block;
 }
 
-/* TITRE EN BAS À DROITE */
 .caré .titre {
   position: absolute;
-  bottom: 10px;              /* légèrement au-dessus du bas */
-  right: 10px;               /* légèrement à droite */
+  bottom: 10px;
+  right: 10px;
   color: white;
-  background-color: rgba(0,0,0,0.5); /* fond semi-transparent pour lisibilité */
+  background-color: rgba(0,0,0,0.5);
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 1rem;
 }
-/* === BANNIÈRE (image du haut) === */
-.banner {
-  position: relative;
-  max-width: 1200px;
-  height: 220px;
-  margin: 0 auto 40px auto; /* centre + espace dessous */
-  border-radius: 15px;
-  overflow: hidden;        /* ⬅️ CLÉ : empêche tout dépassement */
-}
 
-/* Image */
-.banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: 15px;
-}
-
-/* Filtre sombre */
-.banner::after {
-  content: "";
-  position: absolute;
-  inset: 0;                       /* ⬅️ colle parfaitement à l’image */
-  background-color: rgba(0, 0, 0, 0.45);
-  border-radius: 15px;
-  z-index: 1;
-
-}

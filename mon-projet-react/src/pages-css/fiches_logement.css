@@ -1,28 +1,25 @@
-/* Container principal */
 .fiche {
-  max-width: 900px;      /* Largeur max de la fiche */
-  margin: 40px auto;     /* Centré horizontalement avec espace au dessus */
+  max-width: 900px;
+  margin: 40px auto;
   padding: 20px;
   font-family: Arial, sans-serif;
   color: #333;
 }
 
-/* Image principale */
 .image {
   position: relative;
-  text-align: center;    /* Centre l'image horizontalement */
+  text-align: center;
   margin-bottom: 30px;
 }
 
 .image img {
-  width: 100%;           /* L'image prend toute la largeur du conteneur */
-  max-height: 500px;     /* Limite la hauteur */
-  object-fit: cover;     /* L'image garde son ratio */
-  border-radius: 15px;   /* Bords arrondis */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre légère */
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Overlay sombre si besoin */
 .image-overlay {
   position: absolute;
   top: 0;
@@ -30,10 +27,9 @@
   width: 100%;
   height: 100%;
   border-radius: 15px;
-  background: rgba(0, 0, 0, 0.2); /* Filtre sombre */
+  background: rgba(0, 0, 0, 0.2);
 }
 
-/* Bloc titre + host */
 .bloque1 {
   display: flex;
   justify-content: space-between;
@@ -64,11 +60,10 @@
 .nom img {
   width: 60px;
   height: 60px;
-  border-radius: 50%; /* Cercle pour la photo */
+  border-radius: 50%;
   object-fit: cover;
 }
 
-/* Bloc tags + description */
 .bloque2 {
   margin-top: 20px;
 }
@@ -81,7 +76,7 @@
 }
 
 .l1 p {
-  background-color: #ff6060; /* couleur de tag */
+  background-color: #ff6060;
   color: white;
   padding: 5px 10px;
   border-radius: 10px;
@@ -89,7 +84,6 @@
   margin: 0;
 }
 
-/* Description */
 .collapse-content h3 {
   margin-bottom: 10px;
 }
@@ -98,6 +92,8 @@
   line-height: 1.5;
   color: #444;
 }
+
 .Titel {
   color: #ff6060;
 }
+

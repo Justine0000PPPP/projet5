@@ -1,54 +1,13 @@
-/* header.css */
-
-/* Style du header principal */
-.header {
-  display: flex;                 /* Met le logo et la nav sur la même ligne */
-  justify-content: space-between; /* Logo à gauche, nav à droite */
-  align-items: center;           /* Centre verticalement le contenu */
-  padding: 0 40px;               /* Espace gauche et droite du header */
-  height: 70px;                  /* Hauteur du header */
-  background-color: #fff;        /* Couleur de fond du header (blanc) */
-  box-sizing: border-box;
-}
-
-/* Logo KASA */
-.header__logo p {
-  font-size: 2rem;       /* Taille du texte ajustable */
-  font-weight: bold;     /* Gras */
-  color:  #ff6060;         /* Couleur orange */
-  margin: 0;             /* Supprime les marges par défaut */
-}
-
-/* Navigation */
-.header__nav {
-  display: flex;
-  gap: 30px;             /* Espace entre les liens */
-}
-
-/* Liens */
-.header__link {
-  color: black;          /* Texte noir */
-  text-decoration: none; /* Supprime le soulignement */
-  font-size: 1rem;       /* Taille normale */
-  font-weight: normal;   /* Pas gras */
-}
-
-/* Effet au survol (optionnel) */
-.header__link:hover {
-  text-decoration: underline;
-}
-/* === HEADER === */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 100px;
-  background-color: white;   /* fond pour éviter les conflits */
+  background-color: white;
   position: relative;
-  z-index: 10;               /* passe au-dessus des pages */
+  z-index: 10;
 }
 
-/* Logo / titre */
 .header__logo h1 {
   margin: 0;
   font-size: 1.8rem;
@@ -56,16 +15,22 @@
   color: black;
 }
 
-/* Navigation */
+.header__logo p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff6060;
+  margin: 0;
+}
+
 .header__nav {
   display: flex;
   align-items: center;
+  gap: 30px;
 }
 
-/* Liens */
 .header__link {
   margin-left: 30px;
-  color: black;              /* visible sur toutes les pages */
+  color: black;
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
@@ -76,26 +41,22 @@
 }
 
 @media (max-width: 768px) {
-
   .header {
-    padding: 15px 20px;     /* réduit l’espace gauche/droite */
-    height: auto;           /* laisse respirer le header */
+    padding: 15px 20px;
+    height: auto;
   }
 
-  /* Logo Kasa */
   .header__logo h1,
   .header__logo p {
-    font-size: 1.4rem;      /* logo un peu plus petit */
+    font-size: 1.4rem;
   }
 
-  /* Navigation */
   .header__nav {
-    gap: 15px;              /* réduit l’espace entre les liens */
+    gap: 15px;
   }
 
-  /* Liens */
   .header__link {
-    margin-left: 15px;      /* réduit l’espace avec le logo */
-    font-size: 0.95rem;     /* texte légèrement plus petit */
+    margin-left: 15px;
+    font-size: 0.95rem;
   }
 }

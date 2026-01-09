@@ -1,14 +1,13 @@
-/* === FOOTER === */
 .footer {
   width: 100%;
-  height: 180px;          /* ⬅️ règle la hauteur du footer ici */
+  height: 180px;
   margin-top: auto;
 }
 
-/* Image du footer */
 .footer-logo {
   width: 100%;
   height: 100%;
-  object-fit: cover;      /* image bien cadrée */
+  object-fit: cover;
   display: block;
 }
+
