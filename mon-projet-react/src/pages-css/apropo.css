@@ -1,20 +1,52 @@
-.apropo {
-  width: 100%;
-}
-
-/* Conteneur de l’image */
+/* === IMAGE HAUT DE PAGE APROPO === */
 .apropo .img {
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-top: 40px;
+  position: relative;
+  max-width: 1200px;
+  height: 220px;           /* ⬅️ règle la hauteur ici */
+  margin: 40px auto 40px; /* <-- espace sous l’image avant le 1er bloc orange */
+  padding: 0 20px;         /* marges gauche / droite */
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 /* Image */
 .imgapropo {
   width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;        /* centre l’image */
-  border-radius: 20px;   /* coins arrondis */
+  height: 100%;
   object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+
+/* Filtre sombre sur l’image */
+.apropo .img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.35); /* ⬅️ intensité du gris */
+  border-radius: 20px;
+}
+.apropo {
+  padding-bottom: 40px;  /* espace entre le dernier bloc orange et le footer */
+}
+
+@media (max-width: 768px) {
+
+  .apropo .img {
+    height: 160px;              /* image moins haute sur mobile */
+    margin: 20px auto 30px;     /* espace réduit */
+    padding: 0 10px;            /* moins de marge sur les côtés */
+  }
+
+  .apropo .img::after {
+    left: 10px;
+    right: 10px;
+  }
+
+  .apropo {
+    padding-bottom: 30px;       /* espace avant le footer */
+  }
 }
