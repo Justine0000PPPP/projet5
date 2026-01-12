@@ -97,3 +97,19 @@
   color: #ff6060;
 }
 
+  /* ===== ÉTOILES SOUS LA PHOTO (SANS TOUCHER AU RESTE) ===== */
+
+.rating {
+  flex-basis: 100%;        /* force le passage à la ligne */
+  display: flex;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+.rating span {
+  font-size: 20px;
+  margin: 0 2px;
+}
+.nom {
+  flex-wrap: wrap;
+}
