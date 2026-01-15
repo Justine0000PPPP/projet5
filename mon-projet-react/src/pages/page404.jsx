@@ -1,12 +1,19 @@
-import React from 'react';
-import '../pages-css/p404.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "../pages-css/p404.css";
 
-const Page404 = () => {
+function Page404() {
   return (
-    <div>
-      <h1>404</h1>
-      <p>Oups! La page que vous demandez n’existe pas.</p>
-    </div>
+    <main className="page404">
+      <h1 className="page404-title">404</h1>
+      <p className="page404-text">
+        Oups ! La page que vous demandez n’existe pas.
+      </p>
+
+      <Link to="/" className="link-home">
+        Aller à l’accueil
+      </Link>
+    </main>
   );
 };
 

@@ -31,19 +31,10 @@
   padding-bottom: 40px;
 }
 
-@media (max-width: 768px) {
-  .apropo .img {
-    height: 160px;
-    margin: 20px auto 30px;
-    padding: 0 10px;
-  }
-
-  .apropo .img::after {
-    left: 10px;
-    right: 10px;
-  }
-
-  .apropo {
-    padding-bottom: 30px;
-  }
+.collapse-container > .collapse 
+{ margin-bottom: 10px; 
 }
+
+/* .collapse-container { 
+  max-width: 600px; 
+ } */

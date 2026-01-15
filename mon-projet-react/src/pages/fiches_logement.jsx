@@ -1,6 +1,7 @@
 import { useParams, Navigate } from "react-router-dom";
 import logements from "../data.json";
 import "../pages-css/fiches_logement.css";
+import Collapse from "../components/collapse";
 
 const FichesLogement = () => {
   const { id } = useParams();
@@ -30,25 +31,17 @@ const FichesLogement = () => {
           <p>{logement.location}</p>
         </div>
 
-        <div className="nom">
+        <div className="hote">
+          <div className="nomimg">
           <h4>{logement.host.name.split(" ")[0]}</h4>
           <h4>{logement.host.name.split(" ")[1]}</h4>
-
-          <img
-            src={logement.host.picture}
-            alt={logement.host.name}
-          />
-
-          {/* ÉTOILES SOUS LE NOM ET LA PHOTO */}
+          <img src={logement.host.picture} alt={logement.host.name} />
+          </div>
           <div className="rating">
             {stars.map((star) => (
               <span
                 key={star}
-                style={{
-                  color: star <= rating ? "orange" : "lightgray",
-                  fontSize: "20px",
-                  marginRight: "3px",
-                }}
+                className={star <= rating ? "star active" : "star"}
               >
                 ★
               </span>
@@ -57,17 +50,28 @@ const FichesLogement = () => {
         </div>
       </div>
 
-      {/* Tags + description */}
+      {/* Tags + collapses */}
       <div className="bloque2">
+        {/* Tags */}
         <div className="l1">
           {logement.tags.map((tag, i) => (
             <p key={i}>{tag}</p>
           ))}
         </div>
 
-        <div className="collapse-content">
-          <h3>Description</h3>
-          <p>{logement.description}</p>
+        {/* Collapses avec classes spécifiques */}
+        <div className="collapses-logement">
+          <Collapse title="Description" className="collapse-description">
+            <p>{logement.description}</p>
+          </Collapse>
+
+          <Collapse title="Équipements" className="collapse-equipements">
+            <ul>
+              {logement.equipments.map((equipement, i) => (
+                <li key={i}>{equipement}</li>
+              ))}
+            </ul>
+          </Collapse>
         </div>
       </div>
     </div>

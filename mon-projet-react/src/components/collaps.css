@@ -1,75 +1,114 @@
-/* explicaiton code 
-  transition: transform 0.3s ease;
-  transition = animation 
-  : transform = le type danimation 
-   0.3s ease; = la viteesse 
-
-.arrow.open {
-  transform: rotate(180deg);
-  .open = se qui se passe quand linaimton es declancher 
-  transform = se qui se passe 
-  puis apres les deux poitn quel type de trensome 
-
- */.collapse {
-  margin: 15px 0;
-  border-radius: 10px;
+.collapse-container {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
   overflow: hidden;
-  font-family: Arial, sans-serif;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .collapse-header {
+  background-color: #ff6060;
+  color: rgb(247, 247, 255);
+  font-weight: bold;
+  padding: 12px 16px;
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
-  background-color: #ff6060;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
   user-select: none;
-  border-radius: 10px;
-  width: 80%;
-  margin: 0 auto;
 }
 
-.arrow {
+.collapse-title {
+  margin: 0;
+  font-size: 16px;
+  text-align: left;
+}
+
+.collapse-arrow {
   transition: transform 0.3s ease;
+  font-size: 16px;
 }
 
-.arrow.open {
+.collapse-arrow.open {
   transform: rotate(180deg);
 }
 
 .collapse-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.4s ease;
-  background-color: #fff;
-  color: #000;
-  padding: 0 20px;
-  opacity: 0;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 16px;
+  background-color: #f5f5f5;
+  border-radius: 0 0 5px 5px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  line-height: 1.5;
 }
 
 .collapse-content.open {
   max-height: 500px;
-  padding: 15px 20px;
-  opacity: 1;
-  margin-left: 110px;
+  padding: 12px 16px;
 }
 
-@media (max-width: 768px) {
-  .collapse-header {
-    width: 90%;
-    padding: 12px 16px;
-  }
-
-  .collapse-content {
-    padding: 0 16px;
-  }
-
-  .collapse-content.open {
-    padding: 12px 16px;
-    margin-left: 0;
-  }
+.collapse-content p,
+.collapse-content li {
+  margin: 0 0 8px 0;
+  color: #000;
 }
 
+.collapse-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.collapse-content::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+.collapse-content::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+  border-radius: 3px;
+}
+
+
+
+.collapse-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Le conteneur de la flèche */
+.arrow {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: #ff6f61; /* rouge corail */
+  border-radius: 5px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+/* La flèche blanche : on utilise un pseudo-élément avec une forme en chevron */
+.arrow::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-left: 3px solid white;
+  border-bottom: 3px solid white;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* Flèche tournée vers le bas quand ouvert */
+.arrow.open {
+  transform: rotate(-180deg);
+}

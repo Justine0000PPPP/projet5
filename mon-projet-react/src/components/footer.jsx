@@ -1,14 +1,15 @@
-import logo from "../assets/images/source2.jpg";
+import logo from "../assets/images/logofooter.svg";
 import "./footer.css";
-
 const Footer = () => {
   return (
     <footer className="footer">
-      <img
-        src={logo}
-        alt="Logo Kasa"
-        className="footer-logo"
-      />
+      {/* Logo */}
+      <img src={logo} alt="Logo Kasa" className="footer-logo" />
+
+      {/* Texte en dessous */}
+     <div className="footer-text">
+      <p > © 2026 Kasa. All rights reserved.</p>
+      </div>
     </footer>
   );
 };
