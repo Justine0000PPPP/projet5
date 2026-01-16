@@ -1,0 +1,49 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 900px; /* même largeur que .fiche max-width */
+  margin: auto;
+}
+
+.carousel-image {
+  width: 100%;           /* prend toute la largeur du parent */
+  height: 200px;         /* même hauteur que l'ancien .image img */
+  object-fit: cover;     /* couper si besoin */
+  border-radius: 15px;   /* comme .image img */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* comme .image img */
+  display: block;
+}
+
+/* Flèches sur l'image, petites */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;           /* centre verticalement sur l'image */
+  width: 25px;        /* petite taille */
+  height: 25px;       /* petite taille */
+  cursor: pointer;
+  transform: translateY(-50%);
+  z-index: 2;         /* devant l'image */
+}
+
+/* Position flèches */
+.carousel-arrow.left {
+  left: 10px;
+}
+
+.carousel-arrow.right {
+  right: 10px;
+}
+
+/* Compteur centré en bas de l'image */
+.carousel-counter {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  z-index: 2;
+}

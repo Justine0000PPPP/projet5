@@ -5,6 +5,8 @@
   margin: 0 auto 40px auto;
   border-radius: 15px;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .banner img {
@@ -25,11 +27,6 @@
 }
 
 .banner-text {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
   color: white;
   font-size: 2rem;
   font-weight: bold;

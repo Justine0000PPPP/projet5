@@ -14,15 +14,13 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-
+ 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/apropos" element={<Apropo />} />
         <Route path="/logement/:id" element={<FichesLogement />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
-
-
       <Footer />
     </BrowserRouter>
   );

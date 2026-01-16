@@ -1,12 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./haeder.css";  
+import "../pages-css/haeder.css";  
+import logokasa from "../assets/images/kasa.svg";
 
 const Header = () => {
   return (
     <header className="header">
       <div className="header__logo">
-        <p>KASA</p>
+        {/* Remplacement du texte par l'image */}
+        <img src={logokasa} alt="KASA" className="header__logo-img" />
       </div>
 
       <nav className="header__nav">
@@ -21,4 +23,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Header
