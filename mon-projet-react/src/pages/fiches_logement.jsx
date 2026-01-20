@@ -1,5 +1,5 @@
   import { useParams, Navigate } from "react-router-dom";
-  import logements from "../data.json";
+  import logements from "../data/data.json";
   import "../pages-css/fiches_logement.css";
   import Collapse from "../components/collapse";
   import Carousel from "../components/caroucelle";
@@ -13,18 +13,16 @@
         return <Navigate to="/page404" />;
     }
 
-    // Rating
     const rating = parseInt(logement.rating);
     const stars = [1, 2, 3, 4, 5];
 
     return (
       <div className="fiche">
-        {/* Image principale */}
         <div className="image">
     <Carousel pictures={logement.pictures} />
   </div>
 
-        {/* Bloc titre + localisation + host */}
+
         <div className="bloque1">
           <div className="titre">
             <h2 className="Titel">{logement.title}</h2>
@@ -41,7 +39,7 @@
           </div>
         </div>
 
-        {/* Tags + collapses */}
+
         <div className="bloque2">
           <div className="rendetoils">
           {/* Tags */}
@@ -62,7 +60,7 @@
             </div>
             </div>
 
-          {/* Collapses avec classes spécifiques */}
+
           <div className="collapses-logement">
             <Collapse title="Description" className="collapse-description">
               <p>{logement.description}</p>

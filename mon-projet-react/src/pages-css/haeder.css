@@ -4,7 +4,7 @@
   align-items: center;
   padding: 10px 20px;
   background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
 }
 
 .header__logo img {
@@ -30,24 +30,19 @@
 
 @media (max-width: 768px) {
   .header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 15px;
-  }
-
-  .header__nav {
-    flex-direction: row;
-    gap: 10px;
-  }
-
-  .header__link {
-    text-transform: uppercase;
-    font-size: 14px;
+    padding: 16px 18px; /* plus de hauteur */
   }
 
   .header__logo img {
-    width: 80px;
-    height: auto;
+    width: 95px; /* logo légèrement plus grand */
   }
+
+  .header__nav {
+    gap: 14px; /* plus d’espace entre les liens */
   }
+
+  .header__link {
+    font-size: 15px; /* texte un peu plus lisible */
+    text-transform: uppercase;
+  }
+}

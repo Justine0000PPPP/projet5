@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   padding: 20px 0;
-  box-sizing: border-box;
+
 }
 
 .footer-logo {
@@ -28,7 +28,7 @@
 } 
 @media (max-width: 768px) {
   .footer {
-    height: auto;
+    height: 150px;
     padding: 15px 10px;
   }
 
@@ -37,9 +37,13 @@
     margin-bottom: 10px;
   }
 
-  .footer-text {
+   .footer-text {/* ne marche pas  */
     font-size: 12px;
     padding: 0 10px;
-  }
+    text-align: center;      
+    word-wrap: break-word;   
+    white-space: normal;     
+    line-height: 1.5;        
+}
 }
 

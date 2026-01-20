@@ -1,4 +1,4 @@
-  import logements from "../data.json";
+  import logements from "../data/data.json";
   import Bloque_logement from "../components/bloque_logement";
   import banner from "../assets/images/source1.jpg";
   import "../pages-css/home.css";
@@ -7,7 +7,7 @@
     return (
       <div className="home">
 
-        {/* Bannière */}
+
         <div className="banner">
           <img src={banner} alt="Paysage" />
           <p className="banner-text">
@@ -15,7 +15,6 @@
           </p>
         </div>
 
-        {/* Cartes */}
         <div className="cards-container">
           {logements.map(logement => (
             <Bloque_logement

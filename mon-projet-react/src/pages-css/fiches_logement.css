@@ -73,6 +73,7 @@
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 20px;
+  width: 60%;
 }
 
 .l1 p {
@@ -136,12 +137,107 @@
 .rating .star.active {
   color: #ff6060;
   }
-/* .rendetoils {
+ .rendetoils {
   display: flex;         
   align-items: center;   
+  justify-content: space-between;
   gap: 10px;             
 }
 
-.rating {
-  margin-left: auto;     
-} */
+ .rating {
+  justify-content: flex-end;
+  width: 30%;
+} 
+
+@media (max-width: 768px) {
+  .fiche {
+    padding: 0 15px 15px 15px;
+    background-color: rgb(153, 186, 103);
+  }
+
+  .image {
+    margin-bottom: 20px;
+  }
+
+  .bloque1 {
+    flex-direction: column;
+    gap: 15px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .titre h2 {
+    font-size: 20px;
+  }
+
+  .titre p {
+    font-size: 14px;
+  }
+
+  .hote {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 0;
+    background-color: orange;
+        margin-left: auto;
+  }
+
+  .nomimg img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nomimg h4 {
+    font-size: 14px;
+    text-align: right;
+  }
+
+  .l1 {
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: violet;
+        order: 1;
+  }
+
+  .l1 p {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  /* .rendetoils {
+    flex-direction: row;
+    align-items: center;
+    background-color: greenyellow;
+  } */
+
+  .rating {
+    width: auto;
+    justify-content: flex-start;
+    margin-top: 0;
+    background-color: blue;
+  }
+
+  .rating .star {
+    font-size: 18px;
+  }
+
+  .collapses-logement {
+    flex-direction: column;
+    gap: 20px;
+
+  }
+
+  .collapses-logement .collapse-header {
+    height: auto;
+    height: 20px;
+  }
+
+
+   
+
+
+
+}

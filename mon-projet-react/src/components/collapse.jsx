@@ -11,17 +11,12 @@ const Collapse = ({ title, children }) => {
         className="collapse-header"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <h3>{title}</h3>
+        <h3 className="collapse-title">{title}</h3>
+
         <img
           src={logo}
           alt="flèche"
-          className="collapse-arrow"
-          style={{
-            transform: isOpen ? "rotate(180deg)" : "rotate(90deg)",
-            transition: "transform 0.3s ease",
-            width: "20px",
-            height: "20px"
-          }}
+          className={`collapse-arrow ${isOpen ? "open" : ""}`}
         />
       </div>
 

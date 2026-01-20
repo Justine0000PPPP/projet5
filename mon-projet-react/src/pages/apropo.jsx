@@ -1,6 +1,6 @@
 import logo from "../assets/images/source2.jpg";
 import Collapse from "../components/collapse";
-import dataApropo from "../dataapropo.json";
+import dataApropo from "../data/dataapropo.json";
 import "../pages-css/apropo.css";
 
 const Apropo = () => { 
