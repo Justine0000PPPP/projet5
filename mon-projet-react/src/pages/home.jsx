@@ -11,7 +11,7 @@
         <div className="banner">
           <img src={banner} alt="Paysage" />
           <p className="banner-text">
-            Chez vous, partout et ailleurs
+            Chez vous,{"\n"}partout et ailleurs
           </p>
         </div>
 
