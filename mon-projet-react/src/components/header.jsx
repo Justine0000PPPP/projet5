@@ -11,11 +11,22 @@ const Header = () => {
       </div>
 
       <nav className="header__nav">
-        <NavLink to="/" end className="header__link">
+        <NavLink
+          to="/"
+          end
+          className={({ isActive }) =>
+            isActive ? "header__link header__link--active" : "header__link"
+          }
+        >
           Accueil
         </NavLink>
 
-        <NavLink to="/apropos" className="header__link">
+        <NavLink
+          to="/apropos"
+          className={({ isActive }) =>
+            isActive ? "header__link header__link--active" : "header__link"
+          }
+        >
           À propos
         </NavLink>
       </nav>

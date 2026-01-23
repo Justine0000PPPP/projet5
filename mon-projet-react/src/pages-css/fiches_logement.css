@@ -157,57 +157,51 @@
 .collapses-logement li {
   margin-bottom: 5px;
 }
+
+
 @media (max-width: 768px) {
+
   .fiche {
     padding: 0 15px 15px 15px;
   }
 
   .image {
     margin-bottom: 20px;
+    border-radius: 15px;
+    overflow: hidden; 
   }
 
   .bloque1 {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     gap: 15px;
+    margin-bottom: 20px;
   }
 
   .titre h2 {
     font-size: 20px;
+    color: #ff6060;
   }
 
   .titre p {
     font-size: 14px;
-  }
-
-  .hote {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    margin-left: auto;
-
-  }
-
-  .nomimg img {
-    width: 40px;
-    height: 40px;
-  }
-
-  .nomimg h4 {
-    font-size: 14px;
-    text-align: right;
+    color: #666;
   }
 
   .rendetoils {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    margin-bottom: 20px;
   }
 
   .l1 {
     width: 100%;
     order: 1;
     margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
   }
 
   .l1 p {
@@ -215,39 +209,50 @@
     padding: 4px 8px;
   }
 
-  .rating {
-    order: 2;
 
-  flex: 0 0 auto;        /* garde juste la largeur nécessaire */
-  font-size: 18px;       /* taille des étoiles */
-  max-width: 120px;      /* <-- AJOUTE ICI pour réduire la largeur */
-  margin-right: 0;  /* déjà à gauche */
-  max-width: 120px; /* largeur réduite */
+  .stars-hote-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    order: 2;
+  }
+
+  .rating {
+    font-size: 18px;
+    max-width: 120px;
+    color: #ff6060;
+    display: flex;
+    gap: 4px;
   }
 
   .rating .star {
     font-size: 18px;
   }
 
+  .hote {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nomimg h4 {
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .nomimg img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+
   .collapses-logement {
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
-
-
-    .rendetoils {
-
-    display: flex;
-    flex-wrap: wrap;
-
-
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    gap: 15px;
   }
-
-
-}

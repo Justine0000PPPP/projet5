@@ -7,11 +7,11 @@ function Page404() {
     <main className="page404">
       <h1 className="page404-title">404</h1>
       <p className="page404-text">
-        Oups ! La page que vous demandez n’existe pas.
+        Oups ! La page que {"\n"} vous demandez n’existe pas.
       </p>
 
       <Link to="/" className="link-home">
-        Aller à l’accueil
+        Retouner sur la page d'accueil
       </Link>
     </main>
   );

@@ -41,12 +41,15 @@
   .page404-text {
     padding-left: 20px;
     padding-right: 20px;
-    font-size: 14px;
+    font-size: 20px;
   }
 
   .link-home {
     font-size: 14px;
     margin-top: 15px;
+  }
+  .page404-text {
+    white-space: pre-line;
   }
 }
 
