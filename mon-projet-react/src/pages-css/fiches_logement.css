@@ -158,6 +158,11 @@
   margin-bottom: 5px;
 }
 
+.stars-hote-container {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
 
 @media (max-width: 768px) {
 
@@ -213,6 +218,7 @@
   .stars-hote-container {
     display: flex;
     justify-content: space-between;
+    flex-direction: row-reverse;
     align-items: center;
     width: 100%;
     order: 2;
@@ -256,3 +262,4 @@
     gap: 20px;
   }
   }
+  

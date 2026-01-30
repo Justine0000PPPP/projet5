@@ -36,6 +36,15 @@ const FichesLogement = () => {
         </div>
 
         <div className="stars-hote-container">
+          
+
+          <div className="hote">
+            <div className="nomimg">
+              <h4>{logement.host.name.split(" ")[0]}</h4>
+              <h4>{logement.host.name.split(" ")[1]}</h4>
+              <img src={logement.host.picture} alt={logement.host.name} />
+            </div>
+          </div>
           <div className="rating">
             {stars.map((star) => (
               <span
@@ -45,14 +54,6 @@ const FichesLogement = () => {
                 ★
               </span> 
             ))}
-          </div>
-
-          <div className="hote">
-            <div className="nomimg">
-              <h4>{logement.host.name.split(" ")[0]}</h4>
-              <h4>{logement.host.name.split(" ")[1]}</h4>
-              <img src={logement.host.picture} alt={logement.host.name} />
-            </div>
           </div>
         </div>
       </div>
