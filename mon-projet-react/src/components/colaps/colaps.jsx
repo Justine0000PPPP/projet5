@@ -1,6 +1,6 @@
 import { useState } from "react";
-import logo from "../assets/images/right-arrow.svg";
-import "../pages-css/Collaps.css";
+import logo from "../../assets/images/right-arrow.svg";
+import "./colaps.scss";
 
 const Collapse = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);

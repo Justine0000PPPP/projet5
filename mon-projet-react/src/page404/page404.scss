@@ -1,0 +1,72 @@
+// Variables SCSS
+$primary-color: #ff6060;
+$text-color: #000;
+$font-size-large: 8rem;
+$font-size-medium: 5rem;
+$font-size-small: 20px;
+$font-size-link: 14px;
+$padding-default: 50px;
+$padding-mobile: 20px;
+
+// .page404 styles
+.page404 {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+
+  .page404-title {
+    font-size: $font-size-large;
+    color: $primary-color;
+  }
+
+  .page404-text {
+    margin-top: 20px;
+    color: $primary-color;
+    text-align: center;
+    padding-left: $padding-default;
+    padding-right: $padding-default;
+    box-sizing: border-box;
+    white-space: pre-line;
+  }
+
+  .link-home {
+    color: $text-color;
+    font-weight: 400;
+    text-decoration: underline;
+    margin-top: 20px;
+    display: inline-block;
+    font-size: $font-size-link;
+
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      color: $text-color;
+      font-weight: 400;
+      text-decoration: underline;
+    }
+  }
+}
+
+// Media query pour les petits écrans
+@media (max-width: 768px) {
+  .page404 {
+    .page404-title {
+      font-size: $font-size-medium;
+    }
+
+    .page404-text {
+      padding-left: $padding-mobile;
+      padding-right: $padding-mobile;
+      font-size: $font-size-small;
+    }
+
+    .link-home {
+      font-size: $font-size-link;
+      margin-top: 15px;
+    }
+  }
+}

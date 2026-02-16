@@ -1,0 +1,134 @@
+// Variables SCSS
+$banner-radius: 15px;
+$banner-radius-mobile: 10px;
+$banner-overlay-color: rgba(0, 0, 0, 0.45);
+$card-bg-color: #fff;
+$card-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+$card-title-bg: rgba(0, 0, 0, 0.5);
+$banner-text-color: #fff;
+$banner-text-font-size: 2rem;
+$banner-text-font-size-mobile: 1.4rem;
+
+// Banner
+.banner {
+  position: relative;
+  max-width: 1200px;
+  height: 220px;
+  margin: 0 auto 40px auto;
+  border-radius: $banner-radius;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: $banner-radius;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: $banner-overlay-color;
+    border-radius: $banner-radius;
+    z-index: 1;
+  }
+
+  .banner-text {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: $banner-text-color;
+    font-size: $banner-text-font-size;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 20px;
+    margin-top: 0;
+  }
+}
+
+// Cards container
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+
+  .caré {
+    background-color: $card-bg-color;
+    width: 300px;
+    border-radius: $banner-radius;
+    overflow: hidden;
+    box-shadow: $card-shadow;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    text-decoration: none;
+
+    .img {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
+
+    .titre {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      color: $banner-text-color;
+      background-color: $card-title-bg;
+      padding: 5px 10px;
+      border-radius: 0;
+      font-size: 1rem;
+      text-align: left;
+      box-sizing: border-box;
+    }
+  }
+}
+
+// Media query pour mobile
+@media (max-width: 768px) {
+  .banner {
+    height: 120px;
+    margin-bottom: 20px;
+    border-radius: $banner-radius-mobile;
+
+    img {
+      border-radius: $banner-radius-mobile;
+    }
+
+    &::after {
+      border-radius: $banner-radius-mobile;
+    }
+
+    .banner-text {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: left;
+      font-size: $banner-text-font-size-mobile;
+      font-weight: bold;
+      line-height: 1.35;
+      max-width: 210px;
+      white-space: pre-line;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}

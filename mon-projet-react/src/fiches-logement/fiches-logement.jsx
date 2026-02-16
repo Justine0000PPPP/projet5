@@ -1,8 +1,8 @@
 import { useParams, Navigate } from "react-router-dom";
 import logements from "../data/data.json";
-import "../pages-css/fiches_logement.css";
-import Collapse from "../components/collapse";
-import Carousel from "../components/caroucelle";
+import "./fiches-logement.scss";
+import Collapse from "../components/colaps/colaps";
+import Carousel from "../components/caroucelle/caroucelle";
 
 const FichesLogement = () => {
   const { id } = useParams();

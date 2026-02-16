@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-import "../pages-css/carousel.css";
-import arrowLeft from "../assets/images/left-arrow.svg";
-import arrowRight from "../assets/images/right-arrow.svg";
+import "./caroucelle.scss";
+import arrowLeft from "../../assets/images/left-arrow.svg";
+import arrowRight from "../../assets/images/right-arrow.svg";
 
 const Carousel = ({ pictures }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
