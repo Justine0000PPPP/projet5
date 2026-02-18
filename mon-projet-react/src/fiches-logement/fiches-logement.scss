@@ -147,22 +147,42 @@
 
   /* ================= MOBILE ================= */
   @media (max-width: 768px) {
-
-    .fiche {
-      padding: 0 15px 15px 15px;
-    }
-
-    .image {
-      margin-bottom: 20px;
-      border-radius: 15px;
-      overflow: hidden;
-    }
-
-
-
-    .collapses-logement {
-      flex-direction: column;
-      gap: 20px;
-    }
+  .fiche {
+    padding: 0 15px 15px 15px;
   }
 
+  .image {
+    margin-bottom: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  /* Bloc général → passe en colonne */
+  .bloc.general {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+
+  /* Bloque2 → ligne avec Host à droite et Rating à gauche */
+  .bloque2 {
+    display: flex;
+    flex-direction: row-reverse;      /* Host à droite */
+    justify-content: space-between;   /* espace entre les deux */
+    align-items: center;
+    padding: 0;
+  }
+
+  /* Collapses → colonne pour lisibilité */
+  .collapses-logement {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+   .bloc.general {
+    width: 100%; 
+    word-wrap: break-word;  /* coupe les mots trop longs */
+    overflow-wrap: anywhere; /* retour automatique à la ligne si nécessaire */
+  }
+}

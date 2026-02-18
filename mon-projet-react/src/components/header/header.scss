@@ -17,21 +17,28 @@
     gap: 20px;
   }
 
-  &__link,
-  &__link:link,
-  &__link:visited,
-  &__link:hover,
-  &__link:active {
-    text-decoration: none;
+  &__link {
+    text-decoration: none;  /* par défaut, pas de soulignement */
     color: #000;
     font-weight: 500;
+
+    &:hover {
+      text-decoration: none; /* pas de soulignement au survol si non-actif */
+      color: black;
+    }
   }
 
   &__link--active {
+    text-decoration: underline; /* seul le lien actif est souligné */
+  }
+
+  /* optionnel : hover n'affecte jamais le lien actif */
+  &__link--active:hover {
     text-decoration: underline;
   }
 }
 
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
   .header {
     padding: 16px 18px;
