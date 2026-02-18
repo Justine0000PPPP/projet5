@@ -21,13 +21,20 @@ return (
       <Carousel pictures={logement.pictures} />
     </div>
 
-    {/* Titre + Hôte */}
+    <div className="bloc general">
     <div className="bloque1">
       <div className="titre">
         <h2 className="Titel">{logement.title}</h2>
         <p>{logement.location}</p>
       </div>
+          <div className="tag">
+        {logement.tags.map((tag, i) => (
+          <p key={i}>{tag}</p>
+        ))}
+      </div>
+        </div>
 
+        <div className="bloque2">
       <div className="hote">
         <div className="nomimg">
           <div>
@@ -40,16 +47,7 @@ return (
           />
         </div>
       </div>
-    </div>
-
-    {/* Tags + Rating */}
-    <div className="rendetoils">
-      <div className="l1">
-        {logement.tags.map((tag, i) => (
-          <p key={i}>{tag}</p>
-        ))}
-      </div>
-
+    
       <div className="rating">
         {stars.map((star) => (
           <span
@@ -60,6 +58,9 @@ return (
           </span>
         ))}
       </div>
+      <div>
+    </div>
+    </div>
     </div>
 
     {/* Collapses */}
