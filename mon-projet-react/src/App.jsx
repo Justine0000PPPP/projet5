@@ -15,7 +15,7 @@ function App() {
     <BrowserRouter>
       <Header />
 
-      <Routes style="min-width:100vw;">
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/apropos" element={<Apropo />} />
         <Route path="/logement/:id" element={<FichesLogement />} />

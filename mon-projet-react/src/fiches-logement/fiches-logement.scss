@@ -52,7 +52,7 @@
 
   .bloque2 {
     display: flex;
-    justify-content: flex-end; /* Bloc host + rating à droite */
+    justify-content: flex-end; 
     align-items: center;
     margin-bottom: 20px;
 
@@ -126,7 +126,7 @@
   }
 .bloque1 {
   display: flex;
-  flex-direction: column; // met les éléments en colonne
+  flex-direction: column; 
   gap : 10px;
 }
 
@@ -157,7 +157,7 @@
     overflow: hidden;
   }
 
-  /* Bloc général → passe en colonne */
+
   .bloc.general {
     display: flex;
     flex-direction: column;
@@ -165,16 +165,18 @@
   }
 
 
-  /* Bloque2 → ligne avec Host à droite et Rating à gauche */
+
   .bloque2 {
     display: flex;
-    flex-direction: row-reverse;      /* Host à droite */
-    justify-content: space-between;   /* espace entre les deux */
+    flex-direction: row-reverse;      
+    justify-content: space-between;   
     align-items: center;
     padding: 0;
+    justify-content: flex-end; 
+  gap: 30px; 
   }
 
-  /* Collapses → colonne pour lisibilité */
+
   .collapses-logement {
     display: flex;
     flex-direction: column;
@@ -182,7 +184,51 @@
   }
    .bloc.general {
     width: 100%; 
-    word-wrap: break-word;  /* coupe les mots trop longs */
-    overflow-wrap: anywhere; /* retour automatique à la ligne si nécessaire */
+    word-wrap: break-word;  
+    overflow-wrap: anywhere; 
   }
+  .rating {
+    display: flex;
+    align-items: center;
+    gap: 40px; 
+  }
+.bloque2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  gap: 10px; 
+  margin: 0;    
+  padding: 0;   
+
+  .hote {
+    display: flex;
+    align-items: center;
+    gap: 0;      
+    margin: 0;
+    padding: 0;
+    padding-left: 130px;
+
+
+    .nomimg {
+      display: flex;
+      align-items: center;
+      gap: 0;   
+      margin: 0;
+      padding: 0;
+
+    
+    }
+  }
+
+  .rating {
+    display: flex;
+    align-items: center;
+    gap: 0;       
+    margin: 0;
+    padding: 0;
+    
+
+  }
+}
+
 }
